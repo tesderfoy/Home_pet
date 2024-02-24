@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Добавить место</title>
+</head>
+<body>
+<h1>Добавить место для передержки домашних животных</h1>
+
+<form id="addPlaceForm">
+<label for="placeName">Название места:</label>
+<input type="text" id="placeName" name="placeName"><br><br>
+<label for="placeLocation">Местоположение:</label>
+<input type="text" id="placeLocation" name="placeLocation"><br><br>
+<label for="placeName">Цена:</label>
+<input type="text" id="placeName" name="placeName"><br><br>
+<label for="placeDescription">Описание:</label><br>
+<textarea id="placeDescription" name="placeDescription"></textarea><br><br>
+<input type="submit" value="Добавить место">
+</form>
+
+<script>
+document.getElementById('addPlaceForm').addEventListener('submit', function(event) {
+event.preventDefault();
+const placeName = document.getElementById('placeName').value;
+const placeLocation = document.getElementById('placeLocation').value;
+const placeDescription = document.getElementById('placeDescription').value;
+
+// Здесь вы можете добавить код для отправки данных формы на сервер или сохранения их локально
+// Для простоты мы просто выведем данные в консоль
+console.log('Название места:', placeName);
+console.log('Местоположение:', placeLocation);
+console.log('Описание:', placeDescription);
+});
+</script>
+</body>
+</html>
